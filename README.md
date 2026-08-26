@@ -37,14 +37,26 @@ propre ligne.
 ## Vérifier après tout changement
 
 Toujours **à la sortie**, jamais dans le dépôt — une construction Pages peut
-échouer pendant que le fichier est bien commité :
+échouer pendant que le fichier est bien commité.
+
+Et toujours **dans les deux familles d'adresses**. Un domaine peut répondre
+parfaitement en IPv4 et être cassé en IPv6 : OVH pose à l'achat un `A` *et* un
+`AAAA` de parking, et l'IPv6 gagne chez tout client à double pile. Supprimer le
+seul `A` laisse donc une panne qui n'apparaît qu'une sonde sur deux, avec pour
+symptôme un certificat étranger — `CN=cluster121.hosting.ovh.net` — et non un
+404 qu'on aurait vu tout de suite.
 
 ```sh
-curl -sS -o /dev/null -w "%{http_code} %{content_type} redirections=%{num_redirects}\n" \
-  https://neoncompass.app/app-ads.txt
+dig +short neoncompass.app A ; dig +short neoncompass.app AAAA
+for v in 4 6; do
+  curl -$v -sS -o /dev/null \
+    -w "v$v %{remote_ip} %{http_code} %{content_type} redirections=%{num_redirects}\n" \
+    https://neoncompass.app/app-ads.txt
+done
 ```
 
-Attendu : `200 text/plain; charset=utf-8 redirections=0`.
+Attendu, sur les deux lignes : `200 text/plain; charset=utf-8 redirections=0`,
+et une adresse GitHub (`185.199.10{8,9,10,11}.153`, `2606:50c0:800{0,1,2,3}::153`).
 
 ## À faire
 
