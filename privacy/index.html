@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Confidentialité — Neon Compass</title>
+<meta name="description" content="Ce que l'application Neon Compass collecte, ce qu'elle ne collecte pas, et à qui les données sont transmises.">
+<style>
+  :root {
+    color-scheme: dark;
+    --fond: #0b0714;
+    --fond-carte: #150d24;
+    --trait: #2a1c45;
+    --texte: #ece7f5;
+    --texte-doux: #a89dc0;
+    --rose: #ff2d95;
+    --cyan: #38e8ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--fond);
+    color: var(--texte);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page { max-width: 46rem; margin: 0 auto; padding: 3rem 1.5rem 3rem; }
+  a { color: var(--cyan); }
+  .retour { display: inline-block; font-size: .9rem; color: var(--texte-doux); text-decoration: none; margin-bottom: 2rem; }
+  .retour:hover { color: var(--cyan); }
+  header { border-bottom: 1px solid var(--trait); padding-bottom: 2rem; }
+  h1 {
+    font-size: clamp(2rem, 6vw, 2.8rem);
+    line-height: 1.1;
+    margin: 0 0 .6rem;
+    letter-spacing: -.02em;
+    background: linear-gradient(100deg, var(--rose), var(--cyan));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .date { color: var(--texte-doux); font-size: .9rem; margin: 0; }
+  .resume {
+    background: var(--fond-carte);
+    border: 1px solid var(--trait);
+    border-left: 3px solid var(--cyan);
+    border-radius: .9rem;
+    padding: 1.1rem 1.25rem;
+    margin: 2rem 0 0;
+    color: var(--texte-doux);
+  }
+  .resume b { color: var(--texte); }
+  h2 {
+    font-size: 1.05rem;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: var(--texte-doux);
+    margin: 2.75rem 0 .9rem;
+    font-weight: 600;
+  }
+  h3 { font-size: 1rem; margin: 1.6rem 0 .4rem; }
+  p { margin: 0 0 .9rem; }
+  ul.liste { margin: 0 0 .9rem; padding-left: 1.2rem; }
+  ul.liste li { margin-bottom: .45rem; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 .9rem;
+    font-size: .95rem;
+    display: block;
+    overflow-x: auto;
+  }
+  th, td { text-align: left; padding: .6rem .7rem; border-bottom: 1px solid var(--trait); vertical-align: top; }
+  th { color: var(--texte-doux); font-weight: 600; font-size: .85rem; text-transform: uppercase; letter-spacing: .03em; }
+  .langues { border-top: 1px solid var(--trait); margin-top: 3.5rem; padding-top: 2rem; }
+  footer {
+    margin-top: 3.5rem;
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--trait);
+    color: var(--texte-doux);
+    font-size: .9rem;
+  }
+  footer p { margin: 0 0 .6rem; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <a class="retour" href="/">← Neon Compass</a>
+
+  <header>
+    <h1>Politique de confidentialité</h1>
+    <p class="date">Application Neon Compass pour iPhone et iPad — dernière mise à jour le 27 août 2026.</p>
+  </header>
+
+  <p class="resume">
+    <b>En une phrase :</b> l'application s'utilise entièrement sans compte, et dans ce cas rien de
+    ce que vous y faites ne quitte votre appareil. Créer un compte, autoriser les notifications ou
+    accepter les publicités personnalisées sont trois choix distincts, facultatifs, et décrits
+    ci-dessous.
+  </p>
+
+  <h2>1 · Qui traite ces données</h2>
+  <p>
+    L'éditeur de Neon Compass est responsable du traitement décrit ici. Pour toute question,
+    demande d'accès ou réclamation :
+    <a href="mailto:contact@neoncompass.app">contact@neoncompass.app</a>.
+  </p>
+
+  <h2>2 · Sans compte, rien ne part</h2>
+  <p>
+    Ouvrir la carte, poser des épingles, cocher ce que vous avez trouvé, mettre des codes en
+    favori, masquer un contributeur : tout cela est enregistré <b>uniquement sur votre appareil</b>,
+    dans le stockage privé de l'application. Ces données ne nous sont pas transmises et nous ne
+    pouvons pas les lire. Elles sont incluses dans la sauvegarde de votre appareil si vous en avez
+    activé une, selon vos réglages iOS.
+  </p>
+  <p>
+    L'application télécharge en revanche ses cartes, ses lieux, ses codes et ses actualités depuis
+    notre hébergement. Comme toute requête sur Internet, celle-ci expose votre adresse IP au
+    serveur qui répond ; elle ne porte aucun identifiant de compte tant que vous n'en avez pas créé.
+  </p>
+
+  <h2>3 · Le compte, si vous en créez un</h2>
+  <p>
+    Le compte sert à contribuer à la carte, à voter, à apparaître au classement et à synchroniser
+    vos épingles. Il se crée par Sign in with Apple, par Google, ou par e-mail et mot de passe.
+  </p>
+  <table>
+    <tr><th>Donnée</th><th>Pourquoi</th></tr>
+    <tr><td>Identifiant de compte et adresse e-mail</td><td>Vous authentifier. Avec Sign in with Apple, l'adresse peut être une adresse relais fournie par Apple, que nous n'utilisons que pour vous écrire.</td></tr>
+    <tr><td>Pseudonyme</td><td>Vous nommer publiquement à côté de vos contributions et au classement.</td></tr>
+    <tr><td>Points, niveau, rang</td><td>La progression de contribution affichée sur votre profil.</td></tr>
+    <tr><td>Statut Pro</td><td>Débloquer les fonctions payantes.</td></tr>
+    <tr><td>Contributions</td><td>Le lieu proposé, sa catégorie, son intitulé, sa position sur la carte et sa langue. Une contribution publiée est publique, avec votre pseudonyme.</td></tr>
+    <tr><td>Votes et signalements</td><td>Faire remonter les bonnes propositions et écarter les mauvaises.</td></tr>
+    <tr><td>Épingles synchronisées</td><td>Uniquement avec l'abonnement Pro, et uniquement si vous activez la synchronisation. Sans elle, vos épingles restent sur l'appareil.</td></tr>
+  </table>
+  <p>
+    Ces données sont hébergées par <b>Supabase</b> sur des serveurs situés dans l'Union européenne.
+  </p>
+
+  <h2>4 · La publicité</h2>
+  <p>
+    L'application est gratuite et financée par la publicité, servie par <b>Google AdMob</b>. Deux
+    formats : une bannière, et un écran publicitaire occasionnel entre deux consultations. La carte
+    en est délibérément exclue.
+  </p>
+  <h3>Publicité personnalisée ou non</h3>
+  <p>
+    Une publicité personnalisée s'appuie sur l'<b>identifiant publicitaire de votre appareil</b>
+    (IDFA). iOS ne le communique qu'avec votre autorisation explicite, demandée dans une boîte de
+    dialogue du système. <b>Si vous refusez, l'application continue de fonctionner à l'identique</b>
+    et les publicités deviennent non personnalisées. Vous pouvez revenir sur ce choix à tout moment
+    dans <i>Réglages → Confidentialité et sécurité → Suivi</i>.
+  </p>
+  <h3>En Europe</h3>
+  <p>
+    Un formulaire de consentement fourni par Google (<i>User Messaging Platform</i>) est présenté au
+    premier lancement et recueille vos choix au titre du RGPD. Tant que ce consentement n'est pas
+    obtenu là où il est requis, aucune publicité n'est demandée.
+  </p>
+  <h3>Mesure des installations</h3>
+  <p>
+    L'application déclare la liste des identifiants <b>SKAdNetwork</b> d'Apple. Ce mécanisme permet
+    à un annonceur de savoir qu'une de ses campagnes a mené à une installation, sans vous
+    identifier : c'est Apple qui agrège et transmet le résultat, et il ne contient aucune donnée
+    personnelle.
+  </p>
+
+  <h2>5 · Les notifications</h2>
+  <p>
+    Si vous les acceptez, Apple attribue à votre appareil un jeton technique que nous conservons
+    avec les catégories d'alertes que vous avez choisies, afin de vous envoyer ces alertes. Le jeton
+    ne nous dit rien de vous. Refuser les notifications n'a aucune autre conséquence dans
+    l'application.
+  </p>
+
+  <h2>6 · L'abonnement Pro</h2>
+  <p>
+    L'achat est traité par Apple. Nous ne voyons ni votre moyen de paiement, ni votre adresse de
+    facturation : nous recevons d'Apple la seule information de savoir si l'abonnement est actif.
+  </p>
+
+  <h2>7 · La vérification du mot de passe</h2>
+  <p>
+    À la création d'un compte par e-mail, l'application vérifie que le mot de passe choisi ne figure
+    pas dans les fuites de données publiquement connues, auprès du service
+    <i>Have I Been Pwned</i>. <b>Votre mot de passe ne quitte jamais l'appareil.</b> Seuls les cinq
+    premiers caractères de son empreinte sont transmis, ce qui correspond à environ un mot de passe
+    sur un million : le service ne peut pas savoir lequel vous avez choisi, ni même si le vôtre
+    figurait parmi les réponses qu'il a renvoyées.
+  </p>
+
+  <h2>8 · Ce que l'application ne fait pas</h2>
+  <ul class="liste">
+    <li>Elle ne demande <b>jamais votre position</b> : elle n'utilise aucun service de
+    géolocalisation, et ses cartes sont nos propres dessins, pas une carte du monde réel.</li>
+    <li>Elle n'accède ni à vos <b>photos</b>, ni à votre <b>appareil photo</b>, ni à vos
+    <b>contacts</b>, ni à votre <b>micro</b>.</li>
+    <li>Elle n'embarque <b>aucun outil de mesure d'audience ni de statistiques comportementales</b>
+    — pas d'analytique, pas de rapport de plantage tiers, pas de traceur publicitaire autre que le
+    dispositif AdMob décrit plus haut.</li>
+    <li>Elle ne vend et ne loue vos données à personne.</li>
+  </ul>
+
+  <h2>9 · À qui les données sont transmises</h2>
+  <table>
+    <tr><th>Destinataire</th><th>Ce qu'il reçoit</th></tr>
+    <tr><td>Supabase</td><td>Hébergement du compte et des contributions. Union européenne.</td></tr>
+    <tr><td>Google (AdMob, User Messaging Platform)</td><td>Les données nécessaires à l'affichage des publicités et au recueil du consentement, dont l'identifiant publicitaire si vous l'avez autorisé.</td></tr>
+    <tr><td>Apple</td><td>Authentification Sign in with Apple, envoi des notifications, traitement des achats, attribution SKAdNetwork.</td></tr>
+    <tr><td>Have I Been Pwned</td><td>Les cinq premiers caractères de l'empreinte d'un mot de passe, à l'inscription par e-mail uniquement.</td></tr>
+  </table>
+
+  <h2>10 · Conservation et suppression</h2>
+  <p>
+    Les données de compte sont conservées tant que le compte existe. Vous pouvez le supprimer
+    vous-même, depuis les réglages de l'application. Cette suppression est immédiate et
+    définitive :
+  </p>
+  <ul class="liste">
+    <li>votre profil, votre progression, vos votes, vos épingles synchronisées et vos jetons de
+    notification sont <b>supprimés</b> ;</li>
+    <li>vos contributions non publiées sont <b>supprimées</b> ;</li>
+    <li>vos contributions <b>déjà publiées sur la carte sont conservées mais anonymisées</b> — le
+    lien avec votre compte et votre pseudonyme sont retirés. Le lieu reste sur la carte, parce qu'il
+    appartient désormais à la carte ; plus rien n'y renvoie à vous.</li>
+  </ul>
+  <p>
+    Les décomptes de votes déjà agrégés sur les propositions d'autres personnes ne sont pas
+    recalculés : ils ne portent aucune information sur qui a voté.
+  </p>
+
+  <h2>11 · Vos droits</h2>
+  <p>
+    Vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation, d'opposition et
+    de portabilité sur les données vous concernant. La suppression du compte, décrite ci-dessus,
+    exerce directement le droit d'effacement. Pour tout le reste, écrivez à
+    <a href="mailto:contact@neoncompass.app">contact@neoncompass.app</a>. Vous pouvez également
+    introduire une réclamation auprès de l'autorité de protection des données de votre pays — en
+    France, la <a href="https://www.cnil.fr">CNIL</a>.
+  </p>
+
+  <h2>12 · Mineurs</h2>
+  <p>
+    L'application n'est pas destinée aux enfants et n'est pas conçue pour un public de moins de
+    13 ans. Nous ne collectons pas sciemment de données les concernant.
+  </p>
+
+  <h2>13 · Ce site</h2>
+  <p>
+    Cette page ne dépose aucun cookie et n'embarque aucune mesure d'audience. Elle est hébergée par
+    GitHub Pages, qui journalise les requêtes, dont l'adresse IP, pour assurer le service.
+  </p>
+
+  <h2>14 · Modifications</h2>
+  <p>
+    Cette politique peut évoluer avec l'application. La date de dernière mise à jour figure en haut
+    de la page, et les changements importants seront annoncés dans l'application.
+  </p>
+
+  <div class="langues">
+    <h2 id="en">English version</h2>
+
+    <p class="resume">
+      <b>In one sentence:</b> the app works entirely without an account, and in that case nothing
+      you do in it leaves your device. Creating an account, allowing notifications and accepting
+      personalised ads are three separate, optional choices, each described below.
+    </p>
+
+    <h3>1 · Who processes this data</h3>
+    <p>
+      The publisher of Neon Compass is the controller for the processing described here. For any
+      question, access request or complaint:
+      <a href="mailto:contact@neoncompass.app">contact@neoncompass.app</a>.
+    </p>
+
+    <h3>2 · Without an account, nothing leaves your device</h3>
+    <p>
+      Browsing the map, dropping pins, ticking off what you have found, favouriting cheats and
+      hiding a contributor are all stored <b>on your device only</b>, in the app's private storage.
+      That data is not sent to us and we cannot read it. It is included in your device backup if you
+      have one enabled, according to your iOS settings.
+    </p>
+    <p>
+      The app does download its maps, locations, cheats and news from our hosting. Like any request
+      on the internet, that exposes your IP address to the server answering it; it carries no account
+      identifier until you create an account.
+    </p>
+
+    <h3>3 · The account, if you create one</h3>
+    <p>
+      An account lets you contribute to the map, vote, appear on the leaderboard and sync your pins.
+      You can create one with Sign in with Apple, with Google, or with an email address and password.
+      We store: your account identifier and email address (with Sign in with Apple this may be a
+      relay address provided by Apple, which we only use to write to you); your nickname, shown
+      publicly beside your contributions and on the leaderboard; your points, level and rank; whether
+      your Pro subscription is active; your contributions (the proposed location, its category, its
+      title, its position on the map and its language — a published contribution is public, with your
+      nickname); your votes and reports; and your synced pins, only with a Pro subscription and only
+      if you turn syncing on. This data is hosted by <b>Supabase</b> on servers in the European Union.
+    </p>
+
+    <h3>4 · Advertising</h3>
+    <p>
+      The app is free and funded by advertising served by <b>Google AdMob</b>: a banner, and an
+      occasional full-screen ad between two readings. The map is deliberately excluded from it.
+    </p>
+    <p>
+      Personalised advertising relies on your device's <b>advertising identifier</b> (IDFA). iOS
+      only shares it with your explicit permission, requested in a system dialog. <b>If you decline,
+      the app keeps working exactly the same way</b> and ads become non-personalised. You can change
+      this at any time in <i>Settings → Privacy &amp; Security → Tracking</i>.
+    </p>
+    <p>
+      In Europe, a consent form provided by Google (<i>User Messaging Platform</i>) is shown on first
+      launch and collects your GDPR choices. Where consent is required and has not been obtained, no
+      ad is requested at all.
+    </p>
+    <p>
+      The app also declares Apple's <b>SKAdNetwork</b> identifiers. That mechanism lets an advertiser
+      learn that one of its campaigns led to an install without identifying you: Apple aggregates and
+      sends the result, and it contains no personal data.
+    </p>
+
+    <h3>5 · Notifications</h3>
+    <p>
+      If you allow them, Apple assigns your device a technical token, which we keep along with the
+      alert categories you chose so we can send you those alerts. The token tells us nothing about
+      you. Declining notifications has no other consequence in the app.
+    </p>
+
+    <h3>6 · The Pro subscription</h3>
+    <p>
+      Purchases are handled by Apple. We never see your payment method or billing address — we only
+      receive from Apple whether the subscription is active.
+    </p>
+
+    <h3>7 · Password checking</h3>
+    <p>
+      When you create an account with an email address, the app checks that your chosen password does
+      not appear in publicly known data breaches, using the <i>Have I Been Pwned</i> service.
+      <b>Your password never leaves your device.</b> Only the first five characters of its hash are
+      sent, which matches roughly one password in a million: the service cannot tell which one you
+      chose, nor even whether yours was among the answers it returned.
+    </p>
+
+    <h3>8 · What the app does not do</h3>
+    <ul class="liste">
+      <li>It <b>never asks for your location</b>: it uses no geolocation service at all, and its maps
+      are our own drawings, not a map of the real world.</li>
+      <li>It does not access your <b>photos</b>, <b>camera</b>, <b>contacts</b> or <b>microphone</b>.</li>
+      <li>It embeds <b>no analytics or behavioural statistics tooling</b> — no analytics SDK, no
+      third-party crash reporting, and no advertising tracker other than the AdMob setup described
+      above.</li>
+      <li>It does not sell or rent your data to anyone.</li>
+    </ul>
+
+    <h3>9 · Who receives data</h3>
+    <p>
+      <b>Supabase</b> hosts the account and contributions, in the European Union. <b>Google</b>
+      (AdMob, User Messaging Platform) receives what is needed to display ads and collect consent,
+      including the advertising identifier if you allowed it. <b>Apple</b> handles Sign in with
+      Apple, notification delivery, purchases and SKAdNetwork attribution. <b>Have I Been Pwned</b>
+      receives the first five characters of a password hash, at email sign-up only.
+    </p>
+
+    <h3>10 · Retention and deletion</h3>
+    <p>
+      Account data is kept for as long as the account exists. You can delete it yourself from the
+      app's settings. That deletion is immediate and permanent: your profile, progress, votes, synced
+      pins and notification tokens are <b>deleted</b>; your unpublished contributions are
+      <b>deleted</b>; and your contributions <b>already published on the map are kept but
+      anonymised</b> — the link to your account and your nickname are removed. The location stays on
+      the map because it now belongs to the map; nothing in it points back to you. Vote counts
+      already aggregated on other people's proposals are not recalculated: they carry no information
+      about who voted.
+    </p>
+
+    <h3>11 · Your rights</h3>
+    <p>
+      You have the right to access, rectify, erase, restrict, object to and port the data concerning
+      you. Deleting your account, as described above, directly exercises the right to erasure. For
+      anything else, write to <a href="mailto:contact@neoncompass.app">contact@neoncompass.app</a>.
+      You may also lodge a complaint with your country's data protection authority — in France, the
+      <a href="https://www.cnil.fr">CNIL</a>.
+    </p>
+
+    <h3>12 · Children</h3>
+    <p>
+      The app is not directed at children and is not designed for an audience under 13. We do not
+      knowingly collect data concerning them.
+    </p>
+
+    <h3>13 · This website</h3>
+    <p>
+      This page sets no cookies and embeds no analytics. It is hosted by GitHub Pages, which logs
+      requests, including IP addresses, in order to run the service.
+    </p>
+
+    <h3>14 · Changes</h3>
+    <p>
+      This policy may change along with the app. The date of the last update is shown at the top of
+      this page, and significant changes will be announced in the app.
+    </p>
+  </div>
+
+  <footer>
+    <p>
+      Projet de fan indépendant. Neon Compass n'est ni édité, ni approuvé, ni associé à Rockstar
+      Games ou à Take-Two Interactive. Les marques citées appartiennent à leurs propriétaires
+      respectifs.
+    </p>
+    <p>Une question, un signalement : <a href="mailto:contact@neoncompass.app">contact@neoncompass.app</a></p>
+    <p>© 2026 Neon Compass</p>
+  </footer>
+
+</div>
+</body>
+</html>
