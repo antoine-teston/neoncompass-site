@@ -1,7 +1,8 @@
 # neoncompass-site
 
-Le site de **Neon Compass** — page de présentation et `app-ads.txt` — servi sur
-**`https://neoncompass.app`** par GitHub Pages.
+Le site de **Neon Compass** — page de présentation, politique de
+confidentialité, page d'arrivée des liens de confirmation, et `app-ads.txt` —
+servi sur **`https://neoncompass.app`** par GitHub Pages.
 
 ## Pourquoi un dépôt de projet et pas `antoine-teston.github.io`
 
@@ -34,6 +35,31 @@ App Store. L'état se lit dans AdMob → Apps → onglet *app-ads.txt*. Il vaut 
 Le fichier grandira : chaque partenaire de médiation ajouté plus tard y pose sa
 propre ligne.
 
+## `/auth/confirme/`
+
+La page où Supabase renvoie le navigateur après avoir vérifié une adresse
+e-mail. C'est la valeur de `site_url` du projet, **avec sa barre oblique** :
+sans elle, GitHub Pages répond `301`, et un lien de confirmation n'a pas à
+payer un saut de redirection.
+
+Elle **ne rouvre pas l'app pour y déposer la session**, et c'est délibéré :
+`signUp()` ne passe pas de `redirectTo` et l'app n'a aucun `onOpenURL`, donc les
+jetons ne seraient consommés par personne — l'écran ne bougerait pas, ce qui est
+pire que rien. Le parcours est : lien → cette page → retour à l'app → connexion
+avec le mot de passe qu'on vient de choisir. Le bouton « Ouvrir Neon Compass »
+ne fait que ramener l'app au premier plan, et n'apparaît que sur iOS : ailleurs,
+le schéma d'URL produirait un « impossible d'ouvrir la page » à la fin d'un
+parcours réussi.
+
+L'état par défaut est la **réussite**, sans JavaScript — GoTrue n'ajoute des
+paramètres qu'en cas d'échec, et il les met tantôt dans la requête, tantôt dans
+le fragment selon le flux. Les deux sont lus : sinon la moitié des liens périmés
+afficheraient « c'est bon » à quelqu'un qui doit recommencer.
+
+```sh
+curl -s -o /dev/null -w "%{http_code}\n" https://neoncompass.app/auth/confirme/
+```
+
 ## Vérifier après tout changement
 
 Toujours **à la sortie**, jamais dans le dépôt — une construction Pages peut
@@ -60,6 +86,6 @@ et une adresse GitHub (`185.199.10{8,9,10,11}.153`, `2606:50c0:800{0,1,2,3}::153
 
 ## À faire
 
-- Politique de confidentialité (exigée à trois endroits : formulaire de
-  consentement UMP, fiche App Store, réglages de l'app).
-- Adresse de contact pour le support App Store.
+Rien en attente. La politique de confidentialité est publiée sous `/privacy/`
+(exigée à trois endroits : formulaire de consentement UMP, fiche App Store,
+réglages de l'app), et l'adresse de support est `contact@neoncompass.app`.
