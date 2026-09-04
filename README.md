@@ -1,7 +1,8 @@
 # neoncompass-site
 
 Le site de **Neon Compass** — page de présentation, politique de
-confidentialité, page d'arrivée des liens de confirmation, et `app-ads.txt` —
+confidentialité, page d'assistance, page d'arrivée des liens de confirmation,
+et `app-ads.txt` —
 servi sur **`https://neoncompass.app`** par GitHub Pages.
 
 ## Pourquoi un dépôt de projet et pas `antoine-teston.github.io`
@@ -88,6 +89,7 @@ et une adresse GitHub (`185.199.10{8,9,10,11}.153`, `2606:50c0:800{0,1,2,3}::153
 
 Rien en attente. La politique de confidentialité est publiée sous `/privacy/`
 (exigée à trois endroits : formulaire de consentement UMP, fiche App Store,
-réglages de l'app), et l'adresse de support est `contact@neoncompass.app`. La page
-d'assistance est sous `/support/` (FR + EN sous `#en`) : c'est l'URL à déposer dans le champ
-« URL d'assistance » de la fiche App Store, qui exige une page et non une adresse.
+réglages de l'app), et l'adresse de support est `contact@neoncompass.app`.
+La page d'assistance est sous `/support/` (FR + EN sous `#en`) : c'est l'URL
+à déposer dans le champ « URL d'assistance » de la fiche App Store, qui exige
+une page et non une adresse.
